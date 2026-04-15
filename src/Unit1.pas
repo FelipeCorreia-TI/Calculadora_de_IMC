@@ -46,6 +46,7 @@ var
   Nome, Texto,TextoResultado:string;
   Altura,Peso,CalculoAltura,CalculoIMC: Double;
 begin
+  Texto:='Sua classificação IMC é ';
   if(EdtNome.Text = '') or (EdtAltura.Text = '') or (EdtPeso.Text = '') then
   begin
     ShowMessage('todos os campos devem estar preenchidos!');
@@ -56,13 +57,15 @@ begin
     Altura:= StrToFloat(EdtAltura.Text);
     Peso:= StrToFloat(EdtPeso.Text);
 
-    CalculoAltura:= Altura * Altura;
-
-    CalculoIMC:= Peso / CalculoAltura;
-
-    Texto:='Sua classificação IMC é ';
-
-
+    if (Peso = 0) or (Altura = 0) then
+    begin
+      ShowMessage('Não é possível realizar a operação, pois nem Peso, nem altura devem ser nulos (0)')
+    end
+    else
+    begin
+      CalculoAltura:= Altura * Altura;
+      CalculoIMC:= Peso / CalculoAltura;
+    end;
     if(CalculoIMC < 18.5) then
     begin
       TextoResultado:= 'Magreza';

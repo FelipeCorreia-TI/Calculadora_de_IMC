@@ -1,6 +1,6 @@
 object FormPai: TFormPai
-  Left = 562
-  Top = 200
+  Left = 757
+  Top = 268
   Align = alCustom
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
