@@ -1,11 +1,12 @@
 object FormPai: TFormPai
-  Left = 1009
-  Top = 218
+  Left = 562
+  Top = 200
   Align = alCustom
-  AutoScroll = False
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
   Caption = 'IMC'
   ClientHeight = 310
-  ClientWidth = 232
+  ClientWidth = 226
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,11 +21,11 @@ object FormPai: TFormPai
     Top = 0
     Width = 241
     Height = 313
-    Color = clGray
+    Color = clMedGray
     TabOrder = 0
     object TextNome: TLabel
       Left = 32
-      Top = 24
+      Top = 56
       Width = 45
       Height = 15
       Caption = 'Nome:'
@@ -39,7 +40,7 @@ object FormPai: TFormPai
     end
     object TextAltura: TLabel
       Left = 32
-      Top = 72
+      Top = 120
       Width = 47
       Height = 15
       Caption = 'Altura:'
@@ -54,7 +55,7 @@ object FormPai: TFormPai
     end
     object TextPeso: TLabel
       Left = 32
-      Top = 120
+      Top = 176
       Width = 40
       Height = 15
       Caption = 'Peso:'
@@ -67,37 +68,9 @@ object FormPai: TFormPai
       ParentColor = False
       ParentFont = False
     end
-    object LblResultado: TLabel
-      Left = 16
-      Top = 232
-      Width = 209
-      Height = 65
-      Align = alCustom
-      Alignment = taCenter
-      AutoSize = False
-      Color = clWindow
-      ParentColor = False
-      Layout = tlCenter
-    end
-    object TextResultado: TLabel
-      Left = 16
-      Top = 216
-      Width = 209
-      Height = 15
-      Alignment = taCenter
-      Caption = 'Resultado'
-      Color = clBtnShadow
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -15
-      Font.Name = 'MS UI Gothic'
-      Font.Style = [fsBold]
-      ParentColor = False
-      ParentFont = False
-    end
     object EdtNome: TEdit
       Left = 32
-      Top = 40
+      Top = 80
       Width = 177
       Height = 21
       Cursor = crIBeam
@@ -105,7 +78,7 @@ object FormPai: TFormPai
     end
     object EdtAltura: TEdit
       Left = 32
-      Top = 88
+      Top = 136
       Width = 177
       Height = 21
       Cursor = crIBeam
@@ -113,16 +86,16 @@ object FormPai: TFormPai
     end
     object EdtPeso: TEdit
       Left = 32
-      Top = 136
+      Top = 192
       Width = 177
       Height = 21
       Cursor = crIBeam
       TabOrder = 2
     end
     object BtnCalcular: TButton
-      Left = 32
-      Top = 168
-      Width = 177
+      Left = 16
+      Top = 240
+      Width = 209
       Height = 25
       Caption = 'Calcular'
       TabOrder = 3
