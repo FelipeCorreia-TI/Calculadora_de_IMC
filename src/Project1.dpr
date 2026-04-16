@@ -8,6 +8,7 @@ uses
 
 begin
   Application.Initialize;
+  Application.Title := 'IMC_Calculator';
   Application.CreateForm(TFormPai, FormPai);
   Application.Run;
 end.
