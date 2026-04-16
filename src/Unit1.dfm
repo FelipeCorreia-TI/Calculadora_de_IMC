@@ -1,6 +1,6 @@
 object FormPai: TFormPai
-  Left = 757
-  Top = 268
+  Left = 577
+  Top = 191
   Align = alCustom
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
@@ -22,6 +22,9 @@ object FormPai: TFormPai
     Width = 241
     Height = 313
     Color = clMedGray
+    Ctl3D = True
+    Locked = True
+    ParentCtl3D = False
     TabOrder = 0
     object TextNome: TLabel
       Left = 32

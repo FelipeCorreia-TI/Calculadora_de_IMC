@@ -47,7 +47,7 @@ var
   Altura,Peso,CalculoAltura,CalculoIMC: Double;
 begin
   Texto:='Sua classificação IMC é ';
-  if(EdtNome.Text = '') or (EdtAltura.Text = '') or (EdtPeso.Text = '') then
+  if(EdtNome.Text = '') or (EdtAltura.Text = '') or (EdtPeso.Text = '') then  //Valida campos nulos
   begin
     ShowMessage('todos os campos devem estar preenchidos!');
   end
@@ -57,7 +57,7 @@ begin
     Altura:= StrToFloat(EdtAltura.Text);
     Peso:= StrToFloat(EdtPeso.Text);
 
-    if (Peso = 0) or (Altura = 0) then
+    if (Peso <= 0.0) or (Altura <= 0.0) then //Precipita possível operação de divisão por 0
     begin
       ShowMessage('Não é possível realizar a operação, pois nem Peso, nem altura devem ser nulos (0)')
     end
@@ -65,6 +65,7 @@ begin
     begin
       CalculoAltura:= Altura * Altura;
       CalculoIMC:= Peso / CalculoAltura;
+      ShowMessage('Resultado: ' + sLineBreak +'Nome: '+ Nome +sLineBreak+ Texto + TextoResultado);
     end;
     if(CalculoIMC < 18.5) then
     begin
@@ -85,8 +86,7 @@ begin
     else if(CalculoIMC > 40.0) then
     begin
       TextoResultado:='Obesidade Grave';
-    end;
-    ShowMessage('Resultado: ' + sLineBreak +'Nome: '+ Nome +sLineBreak+ Texto + TextoResultado);
-  end;
+   end;
+   end;
 end;
 end.
