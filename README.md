@@ -1,74 +1,69 @@
-# 🧮 Calculadora de IMC (Delphi)
+# 📊 Calculadora de IMC (Delphi VCL)
 
-Este é um projeto simples de **Calculadora de IMC (Índice de Massa Corporal)** desenvolvido em **Delphi**, com o objetivo de praticar conceitos básicos de programação, lógica e construção de interfaces gráficas.
+Aplicação desktop desenvolvida em **Delphi** para cálculo do **IMC (Índice de Massa Corporal)**, com validações de entrada e classificação automática do resultado.
 
 ---
 
-## 📌 Sobre o projeto
+## 🚀 Sobre o projeto
 
-A aplicação permite que o usuário informe:
+Este projeto consiste em uma aplicação com interface gráfica (VCL) que permite ao usuário:
 
-- Nome  
+- Informar nome, altura e peso
+- Calcular o IMC
+- Visualizar a classificação de forma simples e direta
+
+Além do cálculo, o sistema implementa validações para evitar erros comuns de entrada de dados.
+
+---
+
+## 🧮 Funcionalidades
+
+✔ Entrada de dados:
+- Nome do usuário  
 - Altura  
 - Peso  
 
-E, com base nesses dados, calcula o **IMC** e exibe a classificação correspondente.
+✔ Validações:
+- Campos obrigatórios  
+- Bloqueio de caracteres inválidos  
+- Impede valores zero (evita divisão por zero)  
+
+✔ Cálculo automático do IMC  
+
+✔ Exibição do resultado via mensagem  
+
+✔ Classificação baseada no IMC  
+
+-----
+## 📊 Classificação utilizada
+
+| IMC               | Classificação        |
+|------------------|---------------------|
+| < 18.5           | Magreza             |
+| 18.5 – 24.9      | Normal              |
+| 25 – 29.9        | Sobrepeso           |
+| 30 – 39.9        | Obesidade           |
+| > 40             | Obesidade Grave     |
 
 ---
 
-## ⚙️ Funcionalidades
-
-- ✔️ Entrada de dados pelo usuário  
-- ✔️ Cálculo automático do IMC  
-- ✔️ Classificação baseada nos padrões de saúde  
-- ✔️ Validação de campos obrigatórios  
-- ✔️ Interface gráfica simples e funcional  
-
----
-
-## 🖥️ Interface
-
-A interface foi construída utilizando componentes padrão do Delphi:
-
-- `TEdit` para entrada de dados  
-- `TLabel` para identificação dos campos  
-- `TButton` para execução do cálculo  
-- `TPanel` para organização visual  
-
----
-
-## 🧠 Lógica do cálculo
-
-O cálculo do IMC é feito utilizando a fórmula:
-
-
-IMC = Peso / (Altura × Altura)
-
-
-### Classificação:
-
-- Abaixo de 18.5 → Magreza  
-- 18.5 até 24.9 → Normal  
-- 25.0 até 29.9 → Sobrepeso  
-- 30.0 até 39.9 → Obesidade  
-- Acima de 40 → Obesidade Grave  
-
----
-
-## 🚀 Tecnologias utilizadas
+## 🛠 Tecnologias utilizadas
 
 - Delphi (Object Pascal)
 - VCL (Visual Component Library)
+- Windows API (MessageBox)
 
 ---
 
-## 📚 Aprendizados
+## ▶️ Como executar o projeto
 
-Durante o desenvolvimento deste projeto, foram praticados:
+### 🔧 Pré-requisitos
 
-- Estrutura de um projeto Delphi  
-- Manipulação de eventos (`OnClick`)  
-- Entrada e conversão de dados (`StrToFloat`)  
-- Estruturas condicionais (`if/else`)  
-- Organização básica de interface  
+- Delphi instalado (ex: Delphi 7, XE, ou superior)
+
+### ▶ Passo a passo
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/FelipeCorreia-TI/Calculadora_de_IMC.git
 
